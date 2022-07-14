@@ -1,13 +1,10 @@
-name: hello-php by PHP Composer
+name: hello-php
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
-permissions:
-  contents: read
 
 jobs:
   build:
@@ -16,6 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: インストールパッケージ
       run: |
         sudo apt-get update -qq
